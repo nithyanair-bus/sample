@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sanoop Sasidharan - Interactive Media Portfolio</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+       .tab-content { display: none; }
+       .tab-content.active { display: block; }
+       .tab-btn.active { border-b-2 border-blue-600 text-blue-600 font-bold; }
+   </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+   <!-- Header / Banner -->
+   <header class="bg-slate-900 text-white shadow-lg">
+       <div class="max-w-6xl mx-auto px-6 py-8">
+           <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+               <div>
+                   <div class="flex items-center gap-3">
+                       <h1 class="text-3xl font-bold tracking-tight text-white">Sanoop Sasidharan</h1>
+                       <span class="bg-blue-600 text-xs text-white px-2.5 py-1 rounded-full font-semibold uppercase tracking-wider">Senior Journalist</span>
+                   </div>
+                   <p class="text-slate-400 mt-1 flex items-center gap-2 text-sm">
+                       <i class="fa-solid fa-location-dot text-blue-400"></i> Malappuram, Kerala, India - 679585
+                   </p>
+                   <div class="flex flex-wrap gap-4 mt-3 text-sm text-slate-300">
+                       <a href="tel:+919995023570" class="hover:text-blue-400 transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-xs"></i> +91 9995023570</a>
+                       <a href="mailto:sanubsasidharan@gmail.com" class="hover:text-blue-400 transition flex items-center gap-1.5"><i class="fa-solid fa-envelope text-xs"></i> sanubsasidharan@gmail.com</a>
+                   </div>
+               </div>
+               
+               <!-- Social & External Links -->
+               <div class="flex flex-wrap gap-2">
+                   <a href="https://x.com/sanubsasidharan" target="_blank" class="bg-slate-800 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-xs font-medium transition flex items-center gap-2">
+                       <i class="fa-brands fa-x-twitter"></i> X / Twitter
+                   </a>
+                   <a href="https://linkedin.com/in/sanubsasidharan" target="_blank" class="bg-slate-800 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition flex items-center gap-2">
+                       <i class="fa-brands fa-linkedin"></i> LinkedIn
+                   </a>
+                   <a href="https://sanubsasidharan.blogspot.com" target="_blank" class="bg-slate-800 hover:bg-amber-600 text-white px-3 py-2 rounded-lg text-xs font-medium transition flex items-center gap-2">
+                       <i class="fa-bold fa-blog"></i> Blog 1
+                   </a>
+                   <a href="https://neelambarikku.blogspot.com" target="_blank" class="bg-slate-800 hover:bg-amber-600 text-white px-3 py-2 rounded-lg text-xs font-medium transition flex items-center gap-2">
+                       <i class="fa-bold fa-blog"></i> Blog 2
+                   </a>
+               </div>
+           </div>
+       </div>
+
+       <!-- Navigation Tabs -->
+       <div class="bg-slate-800 border-t border-slate-700">
+           <div class="max-w-6xl mx-auto px-6 flex gap-6 overflow-x-auto text-sm">
+               <button onclick="switchTab('overview')" id="tab-overview" class="tab-btn active py-4 font-medium text-slate-300 hover:text-white transition whitespace-nowrap">Overview & Skills</button>
+               <button onclick="switchTab('experience')" id="tab-experience" class="tab-btn py-4 font-medium text-slate-300 hover:text-white transition whitespace-nowrap">Experience & Breakings</button>
+               <button onclick="switchTab('works')" id="tab-works" class="tab-btn py-4 font-medium text-slate-300 hover:text-white transition whitespace-nowrap">Documentaries & Articles</button>
+               <button onclick="switchTab('awards')" id="tab-awards" class="tab-btn py-4 font-medium text-slate-300 hover:text-white transition whitespace-nowrap">Awards & Honors</button>
+               <button onclick="switchTab('references')" id="tab-references" class="tab-btn py-4 font-medium text-slate-300 hover:text-white transition whitespace-nowrap">References</button>
+           </div>
+       </div>
+   </header>
+
+   <!-- Main Content Container -->
+   <main class="max-w-6xl mx-auto px-6 py-8 flex-grow w-full">
+
+       <!-- TAB 1: OVERVIEW & SKILLS -->
+       <section id="overview" class="tab-content active space-y-8">
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+               
+               <!-- Core Skills -->
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 md:col-span-2">
+                   <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                       <i class="fa-solid fa-list-check text-blue-600"></i> Core Competencies
+                   </h2>
+                   <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-microphone text-blue-500"></i> Anchoring
+                       </div>
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-pen-nib text-blue-500"></i> Copy Writing & Editing
+                       </div>
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-newspaper text-blue-500"></i> Field Reporting
+                       </div>
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-video text-blue-500"></i> Video Editing
+                       </div>
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-magnifying-glass-chart text-blue-500"></i> Data Analysis & Research
+                       </div>
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-feather text-blue-500"></i> Creative Writing
+                       </div>
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-users text-blue-500"></i> Team Coordination
+                       </div>
+                       <div class="bg-slate-50 border border-slate-200 p-3 rounded-lg text-sm font-medium text-slate-700 flex items-center gap-2">
+                           <i class="fa-solid fa-people-group text-blue-500"></i> Team Player
+                       </div>
+                   </div>
+               </div>
+
+               <!-- Languages & Details -->
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                   <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                       <i class="fa-solid fa-language text-blue-600"></i> Languages
+                   </h2>
+                   <div class="flex flex-wrap gap-2 mb-6">
+                       <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-200">English</span>
+                       <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-200">Malayalam</span>
+                       <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-200">Hindi</span>
+                       <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-200">Tamil</span>
+                   </div>
+
+                   <h2 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                       <i class="fa-solid fa-icons text-blue-600"></i> Personal Interests
+                   </h2>
+                   <div class="flex flex-wrap gap-2 text-xs text-slate-600">
+                       <span class="bg-slate-100 px-2.5 py-1 rounded">Travelling</span>
+                       <span class="bg-slate-100 px-2.5 py-1 rounded">Blogging</span>
+                       <span class="bg-slate-100 px-2.5 py-1 rounded">Painting</span>
+                       <span class="bg-slate-100 px-2.5 py-1 rounded">Reading</span>
+                       <span class="bg-slate-100 px-2.5 py-1 rounded">Sports & Games</span>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Qualifications Section -->
+           <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+               <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                   <i class="fa-solid fa-graduation-cap text-blue-600"></i> Qualifications & Certifications
+               </h2>
+               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                   <div class="p-4 border-l-4 border-blue-600 bg-slate-50 rounded-r-lg">
+                       <h3 class="font-bold text-slate-900">MS Communication</h3>
+                       <p class="text-sm text-slate-600">Bangalore University</p>
+                   </div>
+                   <div class="p-4 border-l-4 border-blue-600 bg-slate-50 rounded-r-lg">
+                       <h3 class="font-bold text-slate-900">BA Functional English</h3>
+                       <p class="text-sm text-slate-600">Calicut University</p>
+                   </div>
+                   <div class="p-4 border-l-4 border-blue-600 bg-slate-50 rounded-r-lg">
+                       <h3 class="font-bold text-slate-900">Defence Correspondence Course</h3>
+                       <p class="text-sm text-slate-600">Ministry of Defence, India</p>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <!-- TAB 2: EXPERIENCE & BREAKINGS -->
+       <section id="experience" class="tab-content space-y-8">
+           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+               
+               <!-- Timeline Experience -->
+               <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                   <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                       <i class="fa-solid fa-briefcase text-blue-600"></i> Work Experience Timeline
+                   </h2>
+                   
+                   <div class="relative border-l-2 border-slate-200 ml-4 space-y-8">
+                       
+                       <div class="ml-6 relative">
+                           <div class="absolute -left-[31px] top-1 bg-blue-600 w-4 h-4 rounded-full border-2 border-white"></div>
+                           <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Apr 2025 – Aug 2025</span>
+                           <h3 class="text-lg font-bold text-slate-900 mt-1">Senior Special Correspondent</h3>
+                           <p class="text-sm text-slate-600 font-medium">The New Indian Express</p>
+                       </div>
+
+                       <div class="ml-6 relative">
+                           <div class="absolute -left-[31px] top-1 bg-slate-400 w-4 h-4 rounded-full border-2 border-white"></div>
+                           <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">Sept 2023 – Nov 2024</span>
+                           <h3 class="text-lg font-bold text-slate-900 mt-1">Special Correspondent</h3>
+                           <p class="text-sm text-slate-600 font-medium">The Fourth News, Delhi Bureau</p>
+                       </div>
+
+                       <div class="ml-6 relative">
+                           <div class="absolute -left-[31px] top-1 bg-slate-400 w-4 h-4 rounded-full border-2 border-white"></div>
+                           <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">May 2020 – Aug 2023</span>
+                           <h3 class="text-lg font-bold text-slate-900 mt-1">Senior Content Editor</h3>
+                           <p class="text-sm text-slate-600 font-medium">The AIDEM, Kochi</p>
+                       </div>
+
+                       <div class="ml-6 relative">
+                           <div class="absolute -left-[31px] top-1 bg-slate-400 w-4 h-4 rounded-full border-2 border-white"></div>
+                           <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">May 2014 – Dec 2018</span>
+                           <h3 class="text-lg font-bold text-slate-900 mt-1">Special Correspondent & Bureau Chief</h3>
+                           <p class="text-sm text-slate-600 font-medium">Media One TV, Delhi Bureau</p>
+                       </div>
+
+                       <div class="ml-6 relative">
+                           <div class="absolute -left-[31px] top-1 bg-slate-400 w-4 h-4 rounded-full border-2 border-white"></div>
+                           <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">Apr 2012 – May 2014</span>
+                           <h3 class="text-lg font-bold text-slate-900 mt-1">Chief Reporter</h3>
+                           <p class="text-sm text-slate-600 font-medium">Mathrubhumi News, Kochi</p>
+                       </div>
+
+                       <div class="ml-6 relative">
+                           <div class="absolute -left-[31px] top-1 bg-slate-400 w-4 h-4 rounded-full border-2 border-white"></div>
+                           <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">Nov 2006 – Feb 2012</span>
+                           <h3 class="text-lg font-bold text-slate-900 mt-1">Senior Reporter</h3>
+                           <p class="text-sm text-slate-600 font-medium">Asianet News</p>
+                       </div>
+
+                   </div>
+               </div>
+
+               <!-- Major Breakings & Coverage -->
+               <div class="space-y-6">
+                   <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                       <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                           <i class="fa-solid fa-bullhorn text-red-600"></i> Major Breaking Exposés
+                       </h2>
+                       <ul class="space-y-3 text-sm">
+                           <li class="p-3 bg-red-50 text-red-900 border border-red-200 rounded-lg flex items-start gap-2">
+                               <i class="fa-solid fa-triangle-exclamation text-red-600 mt-0.5"></i>
+                               <span><strong>DLF Encroachment</strong> in Kochi</span>
+                           </li>
+                           <li class="p-3 bg-red-50 text-red-900 border border-red-200 rounded-lg flex items-start gap-2">
+                               <i class="fa-solid fa-triangle-exclamation text-red-600 mt-0.5"></i>
+                               <span><strong>PSC Job Scam</strong> in Wayanad (2010)</span>
+                           </li>
+                           <li class="p-3 bg-red-50 text-red-900 border border-red-200 rounded-lg flex items-start gap-2">
+                               <i class="fa-solid fa-triangle-exclamation text-red-600 mt-0.5"></i>
+                               <span><strong>Land Scams</strong> by GCDA, Kochi</span>
+                           </li>
+                       </ul>
+                   </div>
+
+                   <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                       <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                           <i class="fa-solid fa-trophy text-amber-500"></i> Major Events Covered
+                       </h2>
+                       <div class="flex flex-wrap gap-2 text-xs">
+                           <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg font-semibold">FIFA U-17 World Cup</span>
+                           <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg font-semibold">Indian Super League (ISL)</span>
+                           <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg font-semibold">International Cricket Matches</span>
+                           <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg font-semibold">Asian Athletic Championship (Odisha 2017)</span>
+                           <span class="bg-slate-100 text-slate-700 px-3 py-2 rounded-lg font-semibold">National School Games</span>
+                       </div>
+                   </div>
+               </div>
+
+           </div>
+       </section>
+
+       <!-- TAB 3: DOCUMENTARIES & ARTICLES -->
+       <section id="works" class="tab-content space-y-8">
+           <div>
+               <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                   <i class="fa-solid fa-film text-blue-600"></i> Featured Documentaries & Video Published
+               </h2>
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                   
+                   <!-- Video Card 1 -->
+                   <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+                       <div class="p-5">
+                           <span class="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full mb-2 inline-block">
+                               <i class="fa-solid fa-award"></i> Laadli Award Winner 2017
+                           </span>
+                           <h3 class="font-bold text-lg text-slate-900 mt-2">111 Saplings for a Girl Child</h3>
+                           <p class="text-sm text-slate-600 mt-2">
+                               Explores a small village in Rajasthan where residents plant 111 saplings to celebrate the birth of every girl child, transforming social attitudes and local climate.
+                           </p>
+                       </div>
+                       <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
+                           <span class="text-xs text-slate-500">Malayalam Documentary</span>
+                           <a href="https://www.youtube.com/watch?v=Oc3aCXkI_HI" target="_blank" class="bg-red-600 hover:bg-red-700 text-white text-xs px-3 py-2 rounded-lg font-medium transition flex items-center gap-1.5">
+                               <i class="fa-brands fa-youtube"></i> Watch on YouTube
+                           </a>
+                       </div>
+                   </div>
+
+                   <!-- Video Card 2 -->
+                   <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+                       <div class="p-5">
+                           <span class="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full mb-2 inline-block">Human Rights Report</span>
+                           <h3 class="font-bold text-lg text-slate-900 mt-2">Life of Women & Children in Kashmir</h3>
+                           <p class="text-sm text-slate-600 mt-2">
+                               Narrates the socio-economic conditions and psychological impact of decades-long militancy and counter-militancy on women and children in the Kashmir Valley.
+                           </p>
+                       </div>
+                       <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
+                           <span class="text-xs text-slate-500">Investigative Documentary</span>
+                           <a href="https://www.youtube.com/watch?v=lcoSZ9gH4AE" target="_blank" class="bg-red-600 hover:bg-red-700 text-white text-xs px-3 py-2 rounded-lg font-medium transition flex items-center gap-1.5">
+                               <i class="fa-brands fa-youtube"></i> Watch on YouTube
+                           </a>
+                       </div>
+                   </div>
+
+                   <!-- Video Card 3 -->
+                   <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+                       <div class="p-5">
+                           <span class="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full mb-2 inline-block">Social Equality</span>
+                           <h3 class="font-bold text-lg text-slate-900 mt-2">Vadayambadi 'Caste Wall' Revisit</h3>
+                           <p class="text-sm text-slate-600 mt-2">
+                               Coverage from Ernakulam where backward community members demolished an alleged caste wall obstructing access to a public playground.
+                           </p>
+                       </div>
+                       <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
+                           <span class="text-xs text-slate-500">Field Report</span>
+                           <a href="https://www.youtube.com/watch?v=_IZ2z7jp9P8" target="_blank" class="bg-red-600 hover:bg-red-700 text-white text-xs px-3 py-2 rounded-lg font-medium transition flex items-center gap-1.5">
+                               <i class="fa-brands fa-youtube"></i> Watch on YouTube
+                           </a>
+                       </div>
+                   </div>
+
+                   <!-- Video Card 4 -->
+                   <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+                       <div class="p-5">
+                           <span class="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full mb-2 inline-block">Social Welfare</span>
+                           <h3 class="font-bold text-lg text-slate-900 mt-2">Juvenile Rehabilitation Challenges</h3>
+                           <p class="text-sm text-slate-600 mt-2">
+                               Highlights the post-observation life of minors facing social stigma, exploitation, and systemic hurdles after leaving juvenile homes.
+                           </p>
+                       </div>
+                       <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
+                           <span class="text-xs text-slate-500">Special Feature</span>
+                           <a href="https://www.youtube.com/watch?v=iGgTnsa3RQo" target="_blank" class="bg-red-600 hover:bg-red-700 text-white text-xs px-3 py-2 rounded-lg font-medium transition flex items-center gap-1.5">
+                               <i class="fa-brands fa-youtube"></i> Watch on YouTube
+                           </a>
+                       </div>
+                   </div>
+
+               </div>
+           </div>
+
+           <!-- Published Articles Section -->
+           <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+               <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                   <i class="fa-regular fa-newspaper text-blue-600"></i> Selected Published Articles & Reports
+               </h2>
+               <div class="space-y-3">
+                   <a href="https://theaidem.com/brahmapuram-waste-plant-fire-turns-kochi-into-a-gas-chamber-with-toxic-smog-health-and-politics/" target="_blank" class="block p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-lg transition">
+                       <div class="flex justify-between items-center">
+                           <div>
+                               <h3 class="font-bold text-slate-900">Brahmapuram Waste Plant Fire Turns Kochi into a Gas Chamber</h3>
+                               <p class="text-xs text-slate-500 mt-1">The AIDEM • Environmental & Political Analysis</p>
+                           </div>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-slate-400"></i>
+                       </div>
+                   </a>
+
+                   <a href="https://theaidem.com/hidden-facts-coal-crisis-india-electricity-shortage/" target="_blank" class="block p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-lg transition">
+                       <div class="flex justify-between items-center">
+                           <div>
+                               <h3 class="font-bold text-slate-900">Hidden Facts Behind Coal Crisis in India & Electricity Shortage</h3>
+                               <p class="text-xs text-slate-500 mt-1">The AIDEM • Infrastructure & Energy Policy</p>
+                           </div>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-slate-400"></i>
+                       </div>
+                   </a>
+
+                   <a href="https://www.myfinpoint.com/lead-story/2022/03/08/kudumbasree-in-a-mission-to-help-covid-affected-members/" target="_blank" class="block p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-lg transition">
+                       <div class="flex justify-between items-center">
+                           <div>
+                               <h3 class="font-bold text-slate-900">Kudumbashree in a Mission to Help COVID-Affected Members</h3>
+                               <p class="text-xs text-slate-500 mt-1">MyFinPoint • Socio-Economic Feature</p>
+                           </div>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-slate-400"></i>
+                       </div>
+                   </a>
+
+                   <a href="https://www.thefourthnews.in/author/sanub-sasidharan" target="_blank" class="block p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-lg transition">
+                       <div class="flex justify-between items-center">
+                           <div>
+                               <h3 class="font-bold text-slate-900">Author Profile & Column Collection</h3>
+                               <p class="text-xs text-slate-500 mt-1">The Fourth News • Political & Current Affairs Archive</p>
+                           </div>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-slate-400"></i>
+                       </div>
+                   </a>
+               </div>
+           </div>
+       </section>
+
+       <!-- TAB 4: AWARDS -->
+       <section id="awards" class="tab-content space-y-6">
+           <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+               <i class="fa-solid fa-award text-amber-500"></i> Honors & Media Recognition
+           </h2>
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+               
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-amber-200 bg-gradient-to-b from-amber-50/50 to-white">
+                   <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                       <i class="fa-solid fa-trophy"></i>
+                   </div>
+                   <span class="text-xs font-semibold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded">2017</span>
+                   <h3 class="text-lg font-bold text-slate-900 mt-2">Laadli Media Award</h3>
+                   <p class="text-sm font-medium text-slate-600 mt-1">Gender Sensitivity Category</p>
+                   <p class="text-xs text-slate-500 mt-3">Awarded for Best Malayalam Documentary ("111 Saplings for a Girl Child").</p>
+               </div>
+
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-blue-200 bg-gradient-to-b from-blue-50/50 to-white">
+                   <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                       <i class="fa-solid fa-tv"></i>
+                   </div>
+                   <span class="text-xs font-semibold text-blue-700 bg-blue-100 px-2.5 py-0.5 rounded">2016</span>
+                   <h3 class="text-lg font-bold text-slate-900 mt-2">State TV Award</h3>
+                   <p class="text-sm font-medium text-slate-600 mt-1">Best Current Affairs Programme</p>
+                   <p class="text-xs text-slate-500 mt-3">Honored by the State Government for excellence in television news broadcasting.</p>
+               </div>
+
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-200 bg-gradient-to-b from-emerald-50/50 to-white">
+                   <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                       <i class="fa-solid fa-newspaper"></i>
+                   </div>
+                   <span class="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded">2016</span>
+                   <h3 class="text-lg font-bold text-slate-900 mt-2">AV Achuthavarrier Award</h3>
+                   <p class="text-sm font-medium text-slate-600 mt-1">Best Investigative Report</p>
+                   <p class="text-xs text-slate-500 mt-3">Recognized for outstanding public-interest journalism and investigative rigor.</p>
+               </div>
+
+           </div>
+       </section>
+
+       <!-- TAB 5: REFERENCES -->
+       <section id="references" class="tab-content space-y-6">
+           <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+               <i class="fa-solid fa-user-check text-blue-600"></i> Professional References
+           </h2>
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+               
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                   <div class="flex items-center gap-4">
+                       <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center font-bold text-lg">
+                           CL
+                       </div>
+                       <div>
+                           <h3 class="font-bold text-slate-900 text-lg">CL Thomas</h3>
+                           <p class="text-sm text-slate-600">Former Editor-in-Chief, Media One TV</p>
+                       </div>
+                   </div>
+                   <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-sm text-slate-600">
+                       <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-blue-500 w-4"></i> +91 9847030932, +91 8590320794</p>
+                       <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-blue-500 w-4"></i> thomascluka135@gmail.com</p>
+                   </div>
+               </div>
+
+               <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                   <div class="flex items-center gap-4">
+                       <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center font-bold text-lg">
+                           SA
+                       </div>
+                       <div>
+                           <h3 class="font-bold text-slate-900 text-lg">S Anand</h3>
+                           <p class="text-sm text-slate-600">Resident Editor, The Hindu (Kerala)</p>
+                       </div>
+                   </div>
+                   <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-sm text-slate-600">
+                       <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-blue-500 w-4"></i> +91 7994448884, +91 9496449844</p>
+                       <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-blue-500 w-4"></i> anandans76@gmail.com</p>
+                   </div>
+               </div>
+
+           </div>
+       </section>
+
+   </main>
+
+   <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 mt-12">
+       <div class="max-w-6xl mx-auto px-6 text-center">
+           <p>© Sanoop Sasidharan — Media Portfolio</p>
+       </div>
+   </footer>
+
+   <!-- Interactive Navigation Script -->
+   <script>
+       function switchTab(tabId) {
+           document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+           document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+           
+           document.getElementById(tabId).classList.add('active');
+           document.getElementById('tab-' + tabId).classList.add('active');
+       }
+   </script>
+</body>
+</html>
